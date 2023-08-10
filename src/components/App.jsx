@@ -3,8 +3,8 @@ import Statistics from "./statistics/Statistics";
 import FeedbackOptions from "./feedbackOptions/FeedbackOptions";
 import Section from "./section/Section";
 import Notification from "./notification/Notification";
-
-export class App extends Component {
+import css from "./App.module.css"
+class App extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -18,8 +18,7 @@ export class App extends Component {
   }
 
   countTotalFeedback = () => {
-    return this.state.good + this.state.neutral + this.state.bad
-
+    return this.state.good + this.state.neutral + this.state.bad;
   }
 
   countPositiveFeedbackPercentage = () => {
@@ -30,7 +29,7 @@ export class App extends Component {
     const options = Object.keys(this.state);
 
     return (
-      <div>
+      <div className={css.container}>
         <Section title="Please leave feadback">
           <FeedbackOptions options={options} onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
@@ -49,6 +48,4 @@ export class App extends Component {
   }
 };
 
-App.propTypes = {
-  
-}
+export default App;

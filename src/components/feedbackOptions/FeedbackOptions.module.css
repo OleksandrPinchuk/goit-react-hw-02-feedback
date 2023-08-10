@@ -1,0 +1,23 @@
+.button {
+    width: 120px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color:rgb(202, 202, 202);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.button:not(:last-child) {
+    margin-right: 20px;
+}
+
+.button:hover {
+    background-color:rgb(166, 166, 166);
+}
+
+.box {
+    text-align: center;
+}
